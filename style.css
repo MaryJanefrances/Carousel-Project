@@ -14,6 +14,7 @@
     width: 100%;
     max-width: 1000px;
     height: 97vh;
+    background-color:  rgb(5, 32, 68);
 }
 
 .carousel  .carousel__item--visible{
@@ -38,9 +39,27 @@
     height: 40px;
 }
 
-.carousel .carousel_actions button#carousel_button--prev{
+.carousel .carousel__actions button#carousel__button--prev{
     margin-left: 20px;
 }
-.carousel .carousel_actions button#carousel_button--next{
+.carousel .carousel__actions button#carousel__button--next{
     margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+.carousel__actions button {
+    display: none;
+}
+
+.carousel:hover .carousel__actions button {
+    display: block;
 }
